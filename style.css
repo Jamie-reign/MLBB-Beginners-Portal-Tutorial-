@@ -1,7 +1,6 @@
-/* --- Global/Body Styles (Parent 1) --- */
 body {
     min-height: 100vh;
-    min-height: 100; /* Redundant line, kept as per instruction not to change code */
+    min-height: 100;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -16,7 +15,6 @@ body {
     background: rgba(255,255,255,0.2);
 }
 
-/* Hide all checkboxes */
 #menu-toggle,
 #search-toggle,
 #profile-toggle,
@@ -24,7 +22,6 @@ body {
     display: none;
 }
 
-/* --- Header/Top Navigation (Parent 2) --- */
 .top-nav {
     display: flex;
     align-items: center;
@@ -33,14 +30,12 @@ body {
     position: relative;
 }
 
-/* Hamburger Icon (Child 1) */
 .hamburger {
     font-size: 20px;
     cursor: pointer;
     margin-right: 10px;
 }
 
-/* Logo (Child 2) */
 .logo {
     font-size: 40px;
     font-weight: bold;
@@ -54,7 +49,6 @@ body {
     width: auto;
 }
 
-/* Right Icons Container (Child 3 Parent) */
 .right-icons {
     position: relative;
 }
@@ -66,9 +60,6 @@ body {
 }
 
 
-/* --- Toggles & Dropdowns (Child Toggles) --- */
-
-/* START WITH ALL MENUS HIDDEN (Universal styles for all toggle boxes) */
 .toggle-menu,
 .toggle-search,
 .toggle-profile,
@@ -81,7 +72,7 @@ body {
     z-index: 20;
 }
 
-/* Hamburger Menu Box */
+
 #menu-toggle:checked ~ .toggle-menu {
     display: flex;
     flex-direction: column;
@@ -99,9 +90,8 @@ body {
     font-size: 5px;
 }
 
-/* Search Box */
 .toggle-search {
-    top: -100%; /* Positioning inside right-icons div */
+    top: -100%; 
     right: 60px;
     margin-top: 5px;
     padding: 10px;
@@ -120,7 +110,6 @@ body {
     display: block;
 }
 
-/* Profile Box */
 #profile-toggle:checked ~ .toggle-profile {
     display: flex;
     flex-direction: column;
@@ -135,8 +124,6 @@ body {
     font-weight: bold;
 }
 
-
-/* --- Second Navigation (Parent 3) --- */
 .second-nav {
     display: flex;
     justify-content: center;
@@ -153,7 +140,6 @@ body {
     padding: 1px;
 }
 
-/* Language Icon and Box (Child 2) */
 .lang-icon {
     cursor: pointer;
     margin-left: 2rem;
@@ -166,12 +152,11 @@ body {
 
 #lang-toggle:checked ~ .lang-box {
     display: flex;
-    flex-direction: column; /* Added flex-direction for correct stacking */
+    flex-direction: column;
     gap: 10px;
     top: 50px;
 }
 
-/* --- Main Content (Parent 4) --- */
 .content {
     padding: 20px;
     max-width: 900px;
@@ -186,7 +171,6 @@ body {
     min-height: auto;
 }
 
-/* Image container (Child 2) */
 .ml {
     width: 100%;
     background: #222;
@@ -200,7 +184,6 @@ body {
     object-fit: cover;
 }
 
-/* Text box (Child 3) */
 .text-box {
     background: #737aa4;
     padding: 20px;
@@ -213,7 +196,6 @@ body {
     font-size: .80rem;
 }
 
-/* --- Footer (Parent 5) --- */
 footer {
     display: flex;
     justify-content: space-between;
@@ -221,7 +203,6 @@ footer {
     align-items: center;
 }
 
-/* Footer Left (Child 1) */
 .footer-left {
     font-size: 10px;
     gap: 15px;
@@ -233,27 +214,25 @@ footer {
     text-decoration: none;
 }
 
-/* Footer Right (Child 2) */
 .footer-right {
     display: flex;
     gap: 15px;
 }
 
-.footer-right span { /* Changed i to span here in original CSS, fixed back to span (or i) to match HTML */
+.footer-right span { 
     font-size: 15px;
     cursor: pointer;
 }
 
-/* --- Media Queries (Parent 6) --- */
 @media (min-width: 700px) {
     .logo { font-size: 2px; }
     .content h1 { font-size: 32px; }
-    .image-placeholder { height: 300px; } /* image-placeholder class not present in HTML */
+    .image-placeholder { height: 300px; } 
     .text-box { font-size: 18px; }
 }
 
 @media (min-width: 1100px) {
     .content { max-width: 1100px; }
     .content h1 { font-size: 36px; }
-    .image-placeholder { height: 400px; } /* image-placeholder class not present in HTML */
+    .image-placeholder { height: 400px; } 
 }
