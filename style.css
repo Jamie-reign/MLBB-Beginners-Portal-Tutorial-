@@ -93,7 +93,6 @@ width: 5em;
     font-size: 5px;
 }
 
-/* SEARCH BOX */
 
 .right-icons {
     position: relative;
@@ -122,7 +121,7 @@ width: 5em;
 #search-toggle:checked ~ .toggle-search {
     display: block;
 }
-/* PROFILE BOX */
+
 #profile-toggle:checked ~ .toggle-profile {
 display: flex;
 flex-direction: column;
@@ -137,7 +136,6 @@ top: 60px;
     font-weight: bold;
 }
 
-/* LANGUAGE BOX */
 #lang-toggle:checked ~ .toggle-lang {
 display: none;
 flex-direction: column;
@@ -242,7 +240,7 @@ text-align: left;
 }
 
 .text-box2 p {
-    font-size: 5px;
+    font-size: .80rem;
 }
 
 footer {
