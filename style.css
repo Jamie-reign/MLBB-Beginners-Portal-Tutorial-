@@ -10,76 +10,79 @@ body {
 }
 
 .separator {
-    width: 100%;
-    height: 1px;
-    background: rgba(255,255,255,0.2);
+width: 100%;
+height: 1px;
+background: rgba(255,255,255,0.2);
 }
 
-#menu-toggle,
-#search-toggle,
-#profile-toggle,
-#lang-toggle {
-    display: none;
+.separator-two {
+    width: 100%;
+    height: 1px;
+    background: white;
 }
 
 .top-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px;
+position: relative;
 }
 
 .hamburger {
-    font-size: 20px;
-    cursor: pointer;
-    margin-right: 10px;
+font-size: 20px;
+cursor: pointer;
+margin-right: 10px;
 }
 
 .logo {
-    font-size: 40px;
-    font-weight: bold;
-    height: auto;
-    display: flex;
-    margin-right: auto;
+font-size: 40px;
+font-weight: bold;
+height: auto;
+display: flex;
+margin-right: auto;
 }
+
 
 .logo img {
     height: 40px;
     width: auto;
 }
 
-.right-icons {
-    position: relative;
-}
-
 .icon {
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 10px;
+font-size: 15px;
+cursor: pointer;
+margin-left: 10px;
 }
 
+#menu-toggle,
+#search-toggle,
+#profile-toggle,
+#lang-toggle {
+display: none;
+}
 
+/* START WITH ALL MENUS HIDDEN */
 .toggle-menu,
 .toggle-search,
 .toggle-profile,
 .toggle-lang {
-    display: none;
-    position: absolute;
-    background: #1a2f6b;
-    padding: 15px;
-    border-radius: 6px;
-    z-index: 20;
+display: none;
+position: absolute;
+background: #1a2f6b;
+padding: 15px;
+border-radius: 6px;
+z-index: 20;
 }
 
-
+/* HAMBURGER MENU */
 #menu-toggle:checked ~ .toggle-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    top: 60px;
-    left: 10px;
-    width: 5em;
+display: flex;
+flex-direction: column;
+gap: 5px;
+top: 60px;
+left: 10px;
+width: 5em;
 }
 
 .menu-box a, .toggle-menu a {
@@ -90,11 +93,21 @@ body {
     font-size: 5px;
 }
 
+/* SEARCH BOX */
+
+.right-icons {
+    position: relative;
+}
+
 .toggle-search {
-    top: -100%; 
+    display: none;
+    position: absolute;
+    top: -100%;
     right: 60px;
-    margin-top: 5px;
+    background: #1a2f6b;
     padding: 10px;
+    border-radius: 2px;
+    margin-top: 5px;
 }
 
 .toggle-search input {
@@ -109,13 +122,13 @@ body {
 #search-toggle:checked ~ .toggle-search {
     display: block;
 }
-
+/* PROFILE BOX */
 #profile-toggle:checked ~ .toggle-profile {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    right: 10px;
-    top: 60px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+right: 10px;
+top: 60px;
 }
 
 .toggle-profile a, .profile-box a {
@@ -124,25 +137,20 @@ body {
     font-weight: bold;
 }
 
-.second-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 10px;
+/* LANGUAGE BOX */
+#lang-toggle:checked ~ .toggle-lang {
+display: none;
+flex-direction: column;
+gap: 10px;
+top: 50px;
 }
 
-.second-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 1px;
+#search-toggle:checked ~ .search-box {
+display: block;
 }
 
-.lang-icon {
-    cursor: pointer;
-    margin-left: 2rem;
+#lang-toggle:checked ~ .lang-box {
+display: flex;
 }
 
 .lang-box{
@@ -150,57 +158,98 @@ body {
     right: 20px;
 }
 
-#lang-toggle:checked ~ .lang-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    top: 50px;
+.taytl-h1 {
+    font-size: 32px;
+}
+
+.second-nav {
+display: flex;
+justify-content: center;
+gap: 10px;
+position: relative;
+padding: 15px;
+font-weight: bold;
+font-size: 10px;
+}
+
+.second-nav a {
+text-decoration: none;
+color: white;
+padding: 1px;
+}
+
+.lang-icon {
+cursor: pointer;
+margin-left: 2rem;
 }
 
 .content {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+padding: 20px;
+max-width: 900px;
+margin: auto;
+text-align: center;
 }
 
 .content h1 {
-    font-size: 15px;
-    margin-bottom: 20px;
-    text-align: left;
-    min-height: auto;
+font-size: .10em;
+margin-bottom: 20px;
+text-align: left;
+min-height: auto;
 }
 
-.ml {
-    width: 100%;
-    background: #222;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.content .taytl-h1 {
+    font-size: 1rem;
 }
 
 .ml img{
     width: 100%;
+    max-width: 600px;
     height: auto;
     object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.ml {
+width: 100%;
+max-width: 400px;
+background: #222;
+border-radius: 10px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .text-box {
-    background: #737aa4;
-    padding: 20px;
-    border-radius: 10px;
-    line-height: 1.6;
-    text-align: left;
+background: #737aa4;
+padding: 20px;
+border-radius: 10px;
+line-height: 1.6;
+text-align: left;
 }
 
 .text-box p {
     font-size: .80rem;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
+.text-box2 {
     padding: 20px;
-    align-items: center;
+    border-radius: 10px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.text-box2 p {
+    font-size: 5px;
+}
+
+footer {
+display: flex;
+justify-content: space-between;
+padding: 20px;
+align-items: center;
 }
 
 .footer-left {
@@ -209,9 +258,9 @@ footer {
 }
 
 .footer-left a {
-    color: white;
-    margin-right: 10px;
-    text-decoration: none;
+color: white;
+margin-right: 10px;
+text-decoration: none;
 }
 
 .footer-right {
@@ -219,20 +268,20 @@ footer {
     gap: 15px;
 }
 
-.footer-right span { 
-    font-size: 15px;
-    cursor: pointer;
+.footer-right span {
+font-size: 15px;
+cursor: pointer;
 }
 
 @media (min-width: 700px) {
-    .logo { font-size: 2px; }
-    .content h1 { font-size: 32px; }
-    .image-placeholder { height: 300px; } 
-    .text-box { font-size: 18px; }
+.logo { font-size: 2px; }
+.content h1 { font-size: 32px; }
+.image-placeholder { height: 300px; }
+.text-box { font-size: 18px; }
 }
 
 @media (min-width: 1100px) {
-    .content { max-width: 1100px; }
-    .content h1 { font-size: 36px; }
-    .image-placeholder { height: 400px; } 
+.content { max-width: 1100px; }
+.content h1 { font-size: 36px; }
+.image-placeholder { height: 400px; }
 }
